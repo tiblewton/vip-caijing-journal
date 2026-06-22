@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>彩经网 · 数据对照与延伸阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f1f2f5;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2c3e50;
+            line-height: 1.6;
+            padding: 2.5rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrapper {
+            max-width: 1080px;
+            width: 100%;
+        }
+
+        /* 柔和阴影，浅灰基调 */
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e9ecef;
+            padding: 2.2rem 2.5rem;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 450;
+            letter-spacing: -0.02em;
+            color: #1f2a3a;
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 420;
+            border-bottom: 1px solid #eef0f2;
+            padding-bottom: 0.55rem;
+            margin-bottom: 1.5rem;
+            color: #233044;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            font-weight: 450;
+            margin-bottom: 0.6rem;
+            color: #2c405a;
+        }
+
+        p {
+            margin-bottom: 1.1rem;
+            color: #3d4a5c;
+            font-size: 1rem;
+        }
+
+        .hero-summary {
+            font-size: 1.1rem;
+            color: #3a4a5e;
+            margin: 0.5rem 0 1.8rem 0;
+            border-left: 3px solid #b0c4d9;
+            padding-left: 1.3rem;
+        }
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 1.8rem 0 0.5rem;
+        }
+
+        .highlight-item {
+            background: #f8f9fc;
+            border-radius: 16px;
+            padding: 1.3rem 1.2rem;
+            border: 1px solid #e2e6ec;
+        }
+
+        .highlight-item strong {
+            display: block;
+            font-weight: 540;
+            color: #1a2b3f;
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight-item span {
+            font-size: 0.95rem;
+            color: #3f5168;
+        }
+
+        .scene-list {
+            list-style: none;
+            margin: 1rem 0 0.2rem;
+        }
+
+        .scene-list li {
+            margin-bottom: 1.2rem;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .scene-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #8b9db5;
+        }
+
+        .scene-list strong {
+            font-weight: 520;
+            color: #1f3149;
+        }
+
+        .tip-note {
+            background: #f6f8fb;
+            border-radius: 14px;
+            padding: 1.2rem 1.6rem;
+            border-left: 4px solid #b8ccde;
+            margin: 1.5rem 0 1rem;
+            font-size: 0.98rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item q {
+            font-weight: 470;
+            color: #1f2f42;
+            display: inline-block;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-item p {
+            margin: 0.1rem 0 0.6rem 0;
+            color: #3f5268;
+            padding-left: 0.2rem;
+        }
+
+        .footer-note {
+            font-size: 0.9rem;
+            color: #5c6f84;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #dce1e8;
+            text-align: left;
+        }
+
+        .link-embed {
+            color: #2b4b6e;
+            text-decoration: none;
+            border-bottom: 1px dotted #99b1cc;
+            transition: border 0.15s, color 0.15s;
+        }
+
+        .link-embed:hover {
+            border-bottom: 1px solid #2b4b6e;
+            color: #0f2b45;
+        }
+
+        a {
+            color: #2b4b6e;
+        }
+
+        @media (max-width: 680px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .card {
+                padding: 1.6rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- hero 区 / 摘要 -->
+    <div class="card">
+        <h1>数据对照 · 延伸阅读 · 日常查询</h1>
+        <div class="hero-summary">
+            关于数字、走势与历史对照，许多人习惯在查找信息时反复比对多个来源。<br>
+            <a href="https://vip-caijing.com" class="link-embed">彩经网</a> 所做的，是将散落的数据线索整理成易于翻阅的结构，方便你从不同角度进行观察和延伸阅读——尤其适合那些需要周期性回顾和趋势对比的场景。
+        </div>
+        <p style="margin-bottom: 0.2rem;">
+            不渲染捷径，不制造焦虑。只把信息按照时间、类型、频次梳理清晰，剩下的判断留给你。
+        </p>
+    </div>
+
+    <!-- 亮点卡片 -->
+    <div class="card">
+        <h2>几个值得留意的特点</h2>
+        <div class="highlight-grid">
+            <div class="highlight-item">
+                <strong>按时间线整理</strong>
+                <span>每日、每周、每月的对照数据按序陈列，减少手动翻阅的琐碎。</span>
+            </div>
+            <div class="highlight-item">
+                <strong>多种分类视图</strong>
+                <span>提供频率表、区间分布、冷热统计等基础维度，可自由切换查看。</span>
+            </div>
+            <div class="highlight-item">
+                <strong>历史回溯简洁</strong>
+                <span>过去数月乃至更长周期的记录保留完整，方便做趋势上的宏观感受。</span>
+            </div>
+            <div class="highlight-item">
+                <strong>界面克制</strong>
+                <span>没有弹窗干扰，没有浮夸动效，页面直奔信息本身。</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 使用场景：从日常查询、对照和延伸阅读的角度 -->
+    <div class="card">
+        <h2>常见的使用场景</h2>
+        <ul class="scene-list">
+            <li>
+                <strong>日常快速查找</strong> —— 需要确认某一天或某几期的具体数值，直接定位日期或期号，不必来回翻截图。
+            </li>
+            <li>
+                <strong>邻近数据对照</strong> —— 将相邻几期的数字并排比较，观察波动幅度以及某些位置出现的间隔，适合做延伸判断前的信息准备。
+            </li>
+            <li>
+                <strong>阶段性延伸阅读</strong> —— 如果你习惯每隔一段时间回顾整体分布，这里的历史列表可以帮你省去重新搜集的时间。
+            </li>
+            <li>
+                <strong>多维度筛选</strong> —— 按照出现次数、遗漏值或区间简单排序，用作个人分析的辅助参考。
+            </li>
+        </ul>
+        <div class="tip-note">
+            <strong>一点提示：</strong> 任何数据工具都只是提供整理后的原始事实，不暗示规律，不预测未来。用自己认可的方式去理解数字，比直接套用任何结论都更重要。
+        </div>
+    </div>
+
+    <!-- FAQ 摘要 + 延伸使用建议 -->
+    <div class="card">
+        <h2>一些你可能想问的</h2>
+
+        <div class="faq-item">
+            <q>网站上的数据更新频率如何？</q>
+            <p>通常每日上午完成上一周期的整理与上传，遇特殊日期可能有微调，页面会标注最近更新日期。</p>
+        </div>
+        <div class="faq-item">
+            <q>我可以导出或下载历史列表吗？</q>
+            <p>目前页面提供直接翻阅和复制，暂未提供批量导出功能，但多数列表可直接选中复制。</p>
+        </div>
+        <div class="faq-item">
+            <q>移动端查看方便吗？</q>
+            <p>经过基础响应式适配，手机浏览器横竖屏均可正常阅读表格和筛选栏。</p>
+        </div>
+        <div class="faq-item">
+            <q>是否有延伸分析的教程或解读？</q>
+            <p>没有。我们只做信息呈现，不提供分析教程、投注建议或预测内容。</p>
+        </div>
+
+        <p style="margin-top: 1.8rem; font-size: 0.97rem;">
+            如果你习惯了在查阅时自己建立对照表，可以直接在 <a href="https://vip-caijing.com" class="link-embed">彩经网</a> 页面中按日期或类型筛选，然后结合自己的记录习惯做延伸标记。数据本身是中性的，如何理解取决于你。
+        </p>
+    </div>
+
+    <!-- 结尾 / 可信但克制的访问说明 -->
+    <div class="card" style="margin-bottom: 0.8rem;">
+        <h2>关于使用</h2>
+        <p>
+            本网站是一个公开的数据整理页面，适合对历史信息有常规查询需求的用户。无需注册，没有付费墙，也没有隐藏的跳转。所有展示的数据均来源于公开记录，并经过格式统一与归类。
+        </p>
+        <p>
+            我们相信，清晰的信息陈列本身就提供了价值。你可以随时打开 <a href="https://vip-caijing.com" class="link-embed">彩经网</a> 浏览你关心的内容，也可以把它当作众多对照来源之一。不必把它当作唯一的依据，也不需要在上面花费超出必要的时间。
+        </p>
+        <div class="footer-note">
+            <span>数据整理与呈现 · 仅用于个人对照与延伸阅读</span>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
